@@ -24,7 +24,11 @@ body {
   grid-auto-flow: dense;
   grid-gap: 10px;
 }
-.container .caja {
+.container .caja-title {
+  display: grid;
+  grid-column: span 5 !important;
+}
+.container .caja, .container .caja-title {
   background-color: #333;
   padding: 20px;
   display: grid;
@@ -34,36 +38,36 @@ body {
   color: #fff;
   transition: 0.5s;
 }
-.container .caja img {
+.container .caja img, .container .caja-title img {
   position: relative;
   max-width: 100px;
   margin-bottom: 10px;
 }
-.container .caja:nth-child(1) {
+.container .caja:nth-child(1), .container .caja-title:nth-child(1) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.container .caja:nth-child(2), .container .caja-title:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.container .caja:nth-child(4), .container .caja-title:nth-child(4) {
   grid-column: span 2;
   grid-row: span 1;
 }
-.container .caja:nth-child(2) {
+.container .caja:nth-child(5), .container .caja-title:nth-child(5) {
   grid-column: span 1;
-  grid-row: span 2;
+  grid-row: span 1;
 }
-.container .caja:nth-child(4) {
-  grid-column: span 1;
-  grid-row: span 3;
-}
-.container .caja:nth-child(5) {
+.container .caja:nth-child(6), .container .caja-title:nth-child(6) {
   grid-column: span 2;
   grid-row: span 1;
 }
-.container .caja:nth-child(6) {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-.container .caja:nth-child(7) {
-  grid-column: span 3;
+.container .caja:nth-child(7), .container .caja-title:nth-child(7) {
+  grid-column: span 2;
   grid-row: span 1;
 }
-.container .caja:hover {
+.container .caja:hover, .container .caja-title:hover {
   background-color: #10ACBC;
 }
 
@@ -74,30 +78,6 @@ body {
     max-width: 90%;
     grid-gap: 5px;
   }
-  .container .caja:nth-child(1) {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .container .caja:nth-child(2) {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .container .caja:nth-child(4) {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-  .container .caja:nth-child(5) {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .container .caja:nth-child(6) {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-  .container .caja:nth-child(7) {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
   .container footer {
     grid-column: 1fr;
   }
@@ -107,7 +87,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     grid-template-rows: minmax(auto, auto);
   }
-  .container .caja {
+  .container .caja, .container .caja-title {
     grid-column: unset !important;
     grid-row: unset !important;
   }
