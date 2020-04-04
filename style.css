@@ -76,6 +76,9 @@ body {
     grid-column: unset !important;
     grid-row: unset !important;
   }
+  .container footer {
+    grid-column: unset !important;
+  }
 }
 footer {
   display: grid;
